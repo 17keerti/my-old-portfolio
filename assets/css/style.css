@@ -1,16 +1,11 @@
 :root{
   --black: black;
   --green: rgb(145, 177, 145);
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  --light-green: rgb(220, 240, 220);
 }
 
 body {
-  background-color: rgb(220, 240, 220);
+  background-color: var(--light-green);
 }
 
 .header {
@@ -49,6 +44,10 @@ a {
 
 p {
   font-size: 16px;
+}
+
+.grid-container h2{
+  font-size: 28px;
 }
 
 .image {
@@ -94,7 +93,7 @@ p {
 .project-desc{
   width:fit-content;
   position: absolute;
-  background: grey;
+  background: var(--light-green);
   z-index: 1;
   padding: 8px;
   margin-top: -80px;
@@ -130,3 +129,24 @@ p {
   display: inline-flex;
   margin-left: 25px;
 }
+
+@media screen and (max-width: 768px) {
+  .header nav ul li{
+    display: block; 
+  }
+
+  .work-cell{
+    flex-direction: column;
+  }
+ 
+  .content{
+    flex-direction: column;
+  }
+ 
+
+  .footer ul li {
+    display: block;
+  }
+}
+
+
