@@ -1,4 +1,4 @@
-:root{
+:root {
   --black: black;
   --green: rgb(145, 177, 145);
   --light-green: rgb(220, 240, 220);
@@ -7,7 +7,7 @@
 body {
   background-color: var(--light-green);
 }
-
+/* header position and nav bar */
 .header {
   padding: 20px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -46,52 +46,55 @@ p {
   font-size: 16px;
 }
 
-.grid-container h2{
+.grid-container h2 {
   font-size: 28px;
 }
-
+/* styling of background image */
 .image {
   width: 100%;
-  aspect-ratio: 16/3 ;
+  aspect-ratio: 16/3;
   margin-bottom: 25px;
   background-image: url("../images/2.jpeg");
 }
-
+/* about me and project section */
 .grid-container {
   display: grid;
-  grid-template-columns: 20% 1fr ;
+  grid-template-columns: 20% 1fr;
   margin-left: 20px;
   gap: 40px 10px;
   max-width: 92%;
 }
 
 .work-cell {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
- .other-project{
+.other-project {
   flex: 0 0 49%;
   max-width: 49%;
   margin-bottom: 2%;
-} 
+}
 
-.other-project-image{
+.other-project-image {
   width: 100%;
 }
 
- .first-project{
+.first-project {
   flex: 1 0 100%;
   margin-bottom: 2%;
 }
-.first-project-image{
-  width: 100%;
-  aspect-ratio: 4/1 ;
+
+.first-project-image {
+  width: 76vw;
+  height: 50vh;
+
 }
-.project-desc{
-  width:fit-content;
+
+.project-desc {
+  width: fit-content;
   position: absolute;
   background: var(--light-green);
   z-index: 1;
@@ -100,28 +103,28 @@ p {
   margin-left: 10px;
   border-radius: 5px;
 }
-
-.footer { 
+/* form contact me section footer */
+.footer {
   display: flex;
   flex: 1 0 auto;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   justify-content: space-between;
   padding: 20px;
   color: var(--black);
   background-color: var(--green);
-} 
+}
 
 .footer h3 {
   font-size: 24px;
-} 
+}
 
 .footer ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:20px;
-  line-height:1.6;
-  margin-bottom:0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
 
@@ -129,20 +132,26 @@ p {
   display: inline-flex;
   margin-left: 25px;
 }
+/* media queries */
 
 @media screen and (max-width: 768px) {
-  .header nav ul li{
-    display: block; 
+  .work-cell {
+    display: flex;
+    flex-direction: column;
   }
 
-  .work-cell{
+  .header nav ul li {
+    display: block;
+  }
+
+  .work-cell {
     flex-direction: column;
   }
- 
-  .content{
+
+  .content {
     flex-direction: column;
   }
- 
+
 
   .footer ul li {
     display: block;
@@ -150,3 +159,13 @@ p {
 }
 
 
+@media screen and (min-width: 992px) {
+  .work-cell {
+    display: flex;
+  }
+
+  .work-cell {
+    flex-direction: block;
+  }
+
+}
