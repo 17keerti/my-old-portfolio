@@ -12,4 +12,4 @@ This is my portfolio website. It contains information about me, about the projec
 
 
 ## Deployment URL
-https://17keerti.github.io/My-portfolio/
+https://17keerti.github.io/my-old-portfolio/
